@@ -6,12 +6,13 @@
 #
 
 PROJECT_DIR = a5
-PROGRAM_USESTACK = myUstStackProgram
+PROGRAM_USESTACK=	myUseStackProgram
 
 CCC= g++
 CCCFLAGS = -Wall -std=c++11 -lpthread -lX11
 
-all : $(PROGRAM_USESTACK)
+.PHONY all
+all:	$(PROGRAM_USESTACK)
 	$(PROGRAM_USESTACK)
 
 # default rule for compiling .cc to .o
