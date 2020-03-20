@@ -16,11 +16,11 @@ all : $(PROGRAM_USESTACK)
 
 # default rule for compiling .cc to .o
 %.o: %.cc
-	$(CCC) $(CCCFLAGS) -c $<
+	$(CCC) $(CCCFLAGS) -c $< $@
 
 #Part one of the assignment
 $(PROGRAM_USESTACK) : $(PROGRAM_USESTACK)
-	$(CCC) $(CCCFLAGS) -o
+	$(CCC) $(CCCFLAGS) -o $(PROGRAM_USESTACK)
 
 useStack:	$(PROGRAM_USESTACK)
 
