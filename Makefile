@@ -20,7 +20,7 @@ all : $(PROGRAM_USESTACK)
 
 #Part one of the assignment
 $(PROGRAM_USESTACK) : $(PROGRAM_USESTACK)
-	$(CCC) $(CCCFLAGS) .cc -o
+	$(CCC) $(CCCFLAGS) -o
 
 useStack:	$(PROGRAM_USESTACK)
 
