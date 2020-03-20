@@ -13,7 +13,6 @@ CCCFLAGS = -Wall -std=c++11 -lpthread -lX11
 
 .PHONY: all
 all:	$(PROGRAM_USESTACK)
-	$(PROGRAM_USESTACK)
 
 # default rule for compiling .cc to .o
 %.o: %.cc
