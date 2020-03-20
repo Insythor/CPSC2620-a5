@@ -16,7 +16,7 @@ all : $(PROGRAM_useStack)
 
 #Part one of the assignment
 useStack : useStack
-useStack : useStack.o useStack.o
+useStack : useStack.o testUseStack.o
 	$(CCC) $(CCCFLAGS) $^ -o $@
 
 # default rule for compiling .cc to .o
