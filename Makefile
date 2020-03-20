@@ -20,7 +20,7 @@ all : $(PROGRAM_USESTACK)
 
 #Part one of the assignment
 $(PROGRAM_USESTACK) : $(PROGRAM_USESTACK)
-	$(CCC) $(CCCFLAGS) -o $(PROGRAM_USESTACK)
+	$(CCC) $(CCCFLAGS) -o $(PROGRAM_USESTACK) $(PROJECT_DIR)/*.cc
 
 useStack:	$(PROGRAM_USESTACK)
 
@@ -28,4 +28,4 @@ clean:
 	rm -f *.o *~ *% $(PROGRAM_USESTACK) *# .#*
 
 clean-all: clean
-	rm -f useStack
+	rm -f $(PROGRAM_USESTACK)
