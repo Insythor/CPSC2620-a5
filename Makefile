@@ -6,25 +6,26 @@
 #
 
 PROJECT_DIR = a5
-PROGRAM_useStack = useStack
+PROGRAM_USESTACK = useStack
 
 CCC= g++
 CCCFLAGS = -Wall -std=c++11 -lpthread -lX11
 
-all : $(PROGRAM_useStack)
-	$(PROGRAM_useStack)
-
-#Part one of the assignment
-useStack : useStack
-useStack : useStack.o testUseStack.o
-	$(CCC) $(CCCFLAGS) $^ -o $@
+all : $(PROGRAM_USESTACK)
+	$(PROGRAM_USESTACK)
 
 # default rule for compiling .cc to .o
 %.o: %.cc
-	$(CCC) -c $(CCCFLAGS) $<
+	$(CCC) $(CCCFLAGS) -c $<
+
+#Part one of the assignment
+$(PROGRAM_USESTACK) : $(PROGRAM_USESTACK)
+	$(CCC) $(CCCFLAGS) $(PROJECT_DIR)/*.cc -o
+
+useStack:	$(PROGRAM_USESTACK)
 
 clean:
-	rm -f *.o *~ *% $(PROGRAM_useStack) *# .#*
+	rm -f *.o *~ *% $(PROGRAM_USESTACK) *# .#*
 
 clean-all: clean
 	rm -f useStack
