@@ -96,9 +96,9 @@ bool useStack::evalRPM(const std::string& toRead, int& res)
 	{
 		res = myStack.top();
 		myStack.pop();
+
 		if(myStack.empty())
 			return true;
 	}
-	else
-		return false;
+	return 0;
 }

@@ -1,7 +1,6 @@
-#ifndef  USESTACK_H
+#ifndef USESTACK_H
 #define USESTACK_H
 
-//#include "CStack.h"
 
 #include <iostream>
 

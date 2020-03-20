@@ -13,9 +13,7 @@
 
 
 int main()
-{// 2 1 2 + 3 4 + * -
-	//std::string tempEquation = "2 1 2 + 3 4 + * -";
-
+{
 	useStack myStack;
 	int result;
 	bool play = true;
@@ -32,9 +30,13 @@ int main()
 				getline(std::cin, input);
 
 			if (myStack.isBallanced(input))
-				std::cout << "\nGood Job! The parentheses were balanced!!!" << std::endl;
+				std::cout
+					<< "\nGood Job! The parentheses were balanced!!!"
+				<< std::endl;
 			else
-				std::cout << "\nThat was an unbalanced quantity of parentheses\n" << std::endl;
+				std::cout
+					<< "\nThat was an unbalanced quantity of parentheses\n"
+				<< std::endl;
 			break;
 		case 1:
 			// RPN
