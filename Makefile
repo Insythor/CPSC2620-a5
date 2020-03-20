@@ -6,7 +6,7 @@
 #
 
 PROJECT_DIR = a5
-PROGRAM_USESTACK = useStack
+PROGRAM_USESTACK = myUstStackProgram
 
 CCC= g++
 CCCFLAGS = -Wall -std=c++11 -lpthread -lX11
