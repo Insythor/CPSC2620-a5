@@ -1,7 +1,11 @@
+/**
+ * @author Tyler Justinen-Teite tyler.justinenteite@uleth.ca
+ * @date 20/03/2020
+ * 
+ * Assignment 5 CPSC 2620
+*/
 
 
-
-#include "CStack.h"
 #include "useStack.h"
 
 #include <iostream>
