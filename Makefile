@@ -1,37 +1,30 @@
 #
-# Makefile for CS 2620 Assignment 3
+# Makefile for CS 2620 Assignment 5
 #
 # Author: Tyler Justinen-Teite
-# Feb. 11, 2020
+# Mar. 20, 2020
 #
 
-PROJECT_DIR = a3
-PROGRAM_CMATRIXEXT = CMatrixExt
-PROGRAM_CMATRIXPRO = CMatrixPro
+PROJECT_DIR = a5
+PROGRAM_useStack = useStack
 
 CCC= g++
 CCCFLAGS = -Wall -std=c++11 -lpthread -lX11
 
-all : $(PROGRAM_CMATRIXEXT) $(PROGRAM_CMATRIXPRO)
-	$(PROGRAM_CMATRIXEXT) $(PROGRAM_CMATRIXPRO)
+all : $(PROGRAM_useStack)
+	$(PROGRAM_useStack)
 
 #Part one of the assignment
-CMatrixExt : CMatrixExt
-CMatrixExt : CMatrixExt.o testMatrixExt.o
-	$(CCC) $(CCCFLAGS) $^ -o $@
-
-#Part two of the assignment
-CMatrixPro : CMatrixPro
-CMatrixPro : CMatrixPro.o testMatrixPro.o
+useStack : useStack
+useStack : useStack.o useStack.o
 	$(CCC) $(CCCFLAGS) $^ -o $@
 
 # default rule for compiling .cc to .o
 %.o: %.cc
 	$(CCC) -c $(CCCFLAGS) $<
 
-
 clean:
-	rm -f *.o *~ *% $(PROGRAM_CMATRIXEXT) $(PROGRAM_CMATRIXPRO) *# .#*
+	rm -f *.o *~ *% $(PROGRAM_useStack) *# .#*
 
 clean-all: clean
-	rm -f CMatrixExt CMatrixPro
+	rm -f useStack
