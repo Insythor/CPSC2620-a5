@@ -11,7 +11,7 @@ PROGRAM_USESTACK=	myUseStackProgram
 CCC= g++
 CCCFLAGS = -Wall -std=c++11 -lpthread -lX11
 
-.PHONY all
+.PHONY: all
 all:	$(PROGRAM_USESTACK)
 	$(PROGRAM_USESTACK)
 
